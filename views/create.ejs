@@ -1,0 +1,22 @@
+<!-- page to add new data  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white;">
+
+    <!-- this form sends POST request to posts/data (which is the same page i.e. create new data page) and then the array is updated  -->
+    <form action="/posts/data" method="POST">
+
+        <textarea name="content" placeholder="content here" cols="30" rows="10"></textarea>
+        <br>
+        <button>Submit</button>
+
+    </form>
+    
+</body>
+</html>

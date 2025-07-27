@@ -1,0 +1,58 @@
+<!-- page to display all data  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .add-data{
+            color:black;
+            font-weight: bolder;
+            text-decoration: none;
+            border:1px solid white;
+            padding:0.5rem;
+            border-radius: 1rem;
+            background-color: wheat;
+        }
+
+        a,button{
+            color:black;
+            font-weight: bolder;
+            text-decoration: none;
+            padding:0.25rem;
+            border-radius: 0.5rem;
+            background-color: white;
+            display: inline;
+        }
+
+    </style>
+</head>
+<body style="background-color: black; color:white;">
+    
+    <h1>Data -</h1>
+    <hr>
+
+    <% for (d of data) { %>
+
+        <h3>id: <%=d.id%></h3>
+        <p>content: <%=d.content%></p>
+        <a href="http://localhost:8080/posts/<%= d.id %>">Read</a>
+        <a href="http://localhost:8080/posts/<%= d.id %>/update">Update</a>
+        <br><br>
+        <!-- <form action="/posts/delete" method="get">
+            <button>Delete</button>
+        </form> -->
+        <form action="/posts/<%= d.id %>/delete?_method=DELETE" method="POST">
+            <button>Delete</button>
+        </form>
+        <hr>
+
+    <% } %>
+
+    <br>
+    <a href="http://localhost:8080/posts/data" class="add-data">Add Data</a>
+
+</body>
+</html>
