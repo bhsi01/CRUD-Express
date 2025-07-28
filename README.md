@@ -20,10 +20,10 @@ Follow these steps to set up and run the project locally:
 
 1. Clone the repository
 
-2. Install dependencies
+2. Install dependencies:
    npm install
 
-3. Run the server
+3. Run the server:
    node app.js
 
    If you have nodemon installed, use:
